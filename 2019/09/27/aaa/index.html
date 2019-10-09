@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>aaa | 蔡彬彬的博客</title>
+  <title>map与set详解 | 蔡彬彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="初探webpack4.0奥术大师多dddasdassdasdasdasdas">
-<meta name="keywords" content="js">
+  <meta name="description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。 Maps 和Objects的区别 一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值  Map中的键值是有序的，但是添加到对象中的键不是  Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。  Object都有自己的原型，原型链上的键名可能会和自己在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="aaa">
+<meta property="og:title" content="map与set详解">
 <meta property="og:url" content="http://yoursite.com/2019/09/27/aaa/index.html">
 <meta property="og:site_name" content="蔡彬彬的博客">
-<meta property="og:description" content="初探webpack4.0奥术大师多dddasdassdasdasdasdas">
+<meta property="og:description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。 Maps 和Objects的区别 一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值  Map中的键值是有序的，但是添加到对象中的键不是  Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。  Object都有自己的原型，原型链上的键名可能会和自己在">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-10-09T04:45:44.410Z">
+<meta property="og:updated_time" content="2019-10-09T08:01:31.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="aaa">
-<meta name="twitter:description" content="初探webpack4.0奥术大师多dddasdassdasdasdasdas">
+<meta name="twitter:title" content="map与set详解">
+<meta name="twitter:description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。 Maps 和Objects的区别 一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值  Map中的键值是有序的，但是添加到对象中的键不是  Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。  Object都有自己的原型，原型链上的键名可能会和自己在">
   
     <link rel="alternative" href="/atom.xml" title="蔡彬彬的博客" type="application/atom+xml">
   
@@ -162,7 +161,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      aaa
+      map与set详解
     </h1>
   
 
@@ -175,7 +174,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="初探webpack4-0"><a href="#初探webpack4-0" class="headerlink" title="初探webpack4.0"></a>初探webpack4.0</h3><p>奥术大师多dddasdassdasdasdasdas</p>
+        <h2 id="Map与Set"><a href="#Map与Set" class="headerlink" title="Map与Set"></a>Map与Set</h2><h3 id="Map对象"><a href="#Map对象" class="headerlink" title="Map对象"></a>Map对象</h3><p>Map对象保存键值对。任何值都可以作为一个键或一个值。</p>
+<h3 id="Maps-和Objects的区别"><a href="#Maps-和Objects的区别" class="headerlink" title="Maps 和Objects的区别"></a>Maps 和Objects的区别</h3><ul>
+<li><p>一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值</p>
+</li>
+<li><p>Map中的键值是有序的，但是添加到对象中的键不是</p>
+</li>
+<li><p>Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。</p>
+</li>
+<li><p>Object都有自己的原型，原型链上的键名可能会和自己在对象上设置的键名产生冲突。</p>
+<h4 id="Map的使用"><a href="#Map的使用" class="headerlink" title="Map的使用"></a>Map的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let myMap=new Map()</span><br><span class="line">let keyString=&apos;a&apos;</span><br><span class="line">myMap.set(keyString,&apos;这是一个测试&apos;)  //这里的key值可以是任意值也可以是NaN</span><br><span class="line">myMap.get(a)  //此时得到的是&quot;这是一个测试&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Map-prototype-has"><a href="#Map-prototype-has" class="headerlink" title="Map.prototype.has()"></a>Map.prototype.has()</h5><blockquote>
+<p>myMap.has(key)</p>
+</blockquote>
+<blockquote>
+<p>返回一个bool值用来表明map中是否存在指定的元素</p>
+</blockquote>
+<h5 id="Map-prototype-clear"><a href="#Map-prototype-clear" class="headerlink" title="Map.prototype.clear()"></a>Map.prototype.clear()</h5><blockquote>
+<p>myMap.clear()</p>
+</blockquote>
+<blockquote>
+<p>清除map中所有成员没有参数和返回值</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="Map-prototype-delete"><a href="#Map-prototype-delete" class="headerlink" title="Map.prototype.delete()"></a>Map.prototype.delete()</h5><blockquote>
+<p>myMap.delete(key)</p>
+</blockquote>
+<blockquote>
+<p>移除map对象中的某个元素，返回值为布尔值</p>
+</blockquote>
+<h5 id="Map-prototype-keys"><a href="#Map-prototype-keys" class="headerlink" title="Map.prototype.keys()"></a>Map.prototype.keys()</h5><blockquote>
+<p>myMap.keys()</p>
+</blockquote>
+<blockquote>
+<p>返回键名的遍历器</p>
+</blockquote>
+<h4 id="Map的迭代"><a href="#Map的迭代" class="headerlink" title="Map的迭代"></a>Map的迭代</h4><p> 对Map进行遍历的方法有很多，但是优先级比较高的还是for…of和for Each</p>
 
       
 
@@ -205,17 +241,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -278,20 +303,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2019/09/29/bbbb/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          bbbb
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
