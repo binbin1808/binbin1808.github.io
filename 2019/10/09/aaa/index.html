@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 蔡彬彬的博客</title>
+  <title>es6 | 蔡彬彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="蔡彬彬的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/aaa/index.html">
 <meta property="og:site_name" content="蔡彬彬的博客">
+<meta property="og:description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-10-09T10:29:34.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蔡彬彬的博客">
+<meta name="twitter:title" content="es6">
+<meta name="twitter:description" content="Map与SetMap对象Map对象保存键值对。任何值都可以作为一个键或一个值。">
   
     <link rel="alternative" href="/atom.xml" title="蔡彬彬的博客" type="application/atom+xml">
   
@@ -150,49 +154,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-aaa" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/09/aaa/" class="archive-article-date">
-  	<time datetime="2019-10-09T10:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/09/aaa/">es6</a>
+    <h1 class="article-title" itemprop="name">
+      es6
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/10/09/aaa/" class="archive-article-date">
+  	<time datetime="2019-10-09T10:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Map与Set"><a href="#Map与Set" class="headerlink" title="Map与Set"></a>Map与Set</h2><h3 id="Map对象"><a href="#Map对象" class="headerlink" title="Map对象"></a>Map对象</h3><p>Map对象保存键值对。任何值都可以作为一个键或一个值。<br> <a id="more"></a> </p>
+<h3 id="Maps-和Objects的区别"><a href="#Maps-和Objects的区别" class="headerlink" title="Maps 和Objects的区别"></a>Maps 和Objects的区别</h3><ul>
+<li>一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值</li>
+<li>Map中的键值是有序的，但是添加到对象中的键不是</li>
+<li>Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。</li>
+<li>Object都有自己的原型，原型链上的键名可能会和自己在对象上设置的键名产生冲突。</li>
+</ul>
+<h4 id="Map的使用"><a href="#Map的使用" class="headerlink" title="Map的使用"></a>Map的使用</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let myMap=new Map()</span><br><span class="line">let keyString=&apos;a&apos;</span><br><span class="line">myMap.set(keyString,&apos;这是一个测试&apos;)  //这里的key值可以是任意值也可以是NaN</span><br><span class="line">myMap.get(a)  //此时得到的是&quot;这是一个测试&quot;</span><br></pre></td></tr></table></figure>
 
+<h5 id="Map-prototype-has"><a href="#Map-prototype-has" class="headerlink" title="Map.prototype.has()"></a>Map.prototype.has()</h5><blockquote>
+<p>myMap.has(key)</p>
+</blockquote>
+<blockquote>
+<p>返回一个bool值用来表明map中是否存在指定的元素</p>
+</blockquote>
+<h5 id="Map-prototype-clear"><a href="#Map-prototype-clear" class="headerlink" title="Map.prototype.clear()"></a>Map.prototype.clear()</h5><blockquote>
+<p>myMap.clear()</p>
+</blockquote>
+<blockquote>
+<p>清除map中所有成员没有参数和返回值</p>
+</blockquote>
+<h5 id="Map-prototype-delete"><a href="#Map-prototype-delete" class="headerlink" title="Map.prototype.delete()"></a>Map.prototype.delete()</h5><blockquote>
+<p>myMap.delete(key)</p>
+</blockquote>
+<blockquote>
+<p>移除map对象中的某个元素，返回值为布尔值</p>
+</blockquote>
+<h5 id="Map-prototype-keys"><a href="#Map-prototype-keys" class="headerlink" title="Map.prototype.keys()"></a>Map.prototype.keys()</h5><blockquote>
+<p>myMap.keys()</p>
+</blockquote>
+<blockquote>
+<p>返回键名的遍历器</p>
+</blockquote>
+<h4 id="Map的迭代"><a href="#Map的迭代" class="headerlink" title="Map的迭代"></a>Map的迭代</h4><p> 对Map进行遍历的方法有很多，但是优先级比较高的还是for…of和for Each</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/09/aaa/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Map与Set"><span class="toc-number">1.</span> <span class="toc-text">Map与Set</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Map对象"><span class="toc-number">1.1.</span> <span class="toc-text">Map对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maps-和Objects的区别"><span class="toc-number">1.2.</span> <span class="toc-text">Maps 和Objects的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Map的使用"><span class="toc-number">1.2.1.</span> <span class="toc-text">Map的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Map-prototype-has"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">Map.prototype.has()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Map-prototype-clear"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">Map.prototype.clear()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Map-prototype-delete"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">Map.prototype.delete()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Map-prototype-keys"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">Map.prototype.keys()</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map的迭代"><span class="toc-number">1.2.2.</span> <span class="toc-text">Map的迭代</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -215,8 +362,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

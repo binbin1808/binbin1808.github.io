@@ -159,58 +159,23 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/27/aaa/">map与set详解</a>
+      <a class="article-title" href="/2019/10/09/aaa/">es6</a>
     </h1>
   
 
         
-        <a href="/2019/09/27/aaa/" class="archive-article-date">
-  	<time datetime="2019-09-27T05:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
+        <a href="/2019/10/09/aaa/" class="archive-article-date">
+  	<time datetime="2019-10-09T10:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Map与Set"><a href="#Map与Set" class="headerlink" title="Map与Set"></a>Map与Set</h2><h3 id="Map对象"><a href="#Map对象" class="headerlink" title="Map对象"></a>Map对象</h3><p>Map对象保存键值对。任何值都可以作为一个键或一个值。</p>
-<h3 id="Maps-和Objects的区别"><a href="#Maps-和Objects的区别" class="headerlink" title="Maps 和Objects的区别"></a>Maps 和Objects的区别</h3><ul>
-<li><p>一个Oject的键只能是字符串或者symbols，但是一个Maps的键可以是任意值</p>
-</li>
-<li><p>Map中的键值是有序的，但是添加到对象中的键不是</p>
-</li>
-<li><p>Map中的键值对的个数是可以从size获取的，而Object的键值对个数只能手动去计算。</p>
-</li>
-<li><p>Object都有自己的原型，原型链上的键名可能会和自己在对象上设置的键名产生冲突。</p>
-<h4 id="Map的使用"><a href="#Map的使用" class="headerlink" title="Map的使用"></a>Map的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let myMap=new Map()</span><br><span class="line">let keyString=&apos;a&apos;</span><br><span class="line">myMap.set(keyString,&apos;这是一个测试&apos;)  //这里的key值可以是任意值也可以是NaN</span><br><span class="line">myMap.get(a)  //此时得到的是&quot;这是一个测试&quot;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Map-prototype-has"><a href="#Map-prototype-has" class="headerlink" title="Map.prototype.has()"></a>Map.prototype.has()</h5><blockquote>
-<p>myMap.has(key)</p>
-</blockquote>
-<blockquote>
-<p>返回一个bool值用来表明map中是否存在指定的元素</p>
-</blockquote>
-<h5 id="Map-prototype-clear"><a href="#Map-prototype-clear" class="headerlink" title="Map.prototype.clear()"></a>Map.prototype.clear()</h5><blockquote>
-<p>myMap.clear()</p>
-</blockquote>
-<blockquote>
-<p>清除map中所有成员没有参数和返回值</p>
-</blockquote>
-</li>
-</ul>
-<h5 id="Map-prototype-delete"><a href="#Map-prototype-delete" class="headerlink" title="Map.prototype.delete()"></a>Map.prototype.delete()</h5><blockquote>
-<p>myMap.delete(key)</p>
-</blockquote>
-<blockquote>
-<p>移除map对象中的某个元素，返回值为布尔值</p>
-</blockquote>
-<h5 id="Map-prototype-keys"><a href="#Map-prototype-keys" class="headerlink" title="Map.prototype.keys()"></a>Map.prototype.keys()</h5><blockquote>
-<p>myMap.keys()</p>
-</blockquote>
-<blockquote>
-<p>返回键名的遍历器</p>
-</blockquote>
-<h4 id="Map的迭代"><a href="#Map的迭代" class="headerlink" title="Map的迭代"></a>Map的迭代</h4><p> 对Map进行遍历的方法有很多，但是优先级比较高的还是for…of和for Each</p>
-
+        <h2 id="Map与Set"><a href="#Map与Set" class="headerlink" title="Map与Set"></a>Map与Set</h2><h3 id="Map对象"><a href="#Map对象" class="headerlink" title="Map对象"></a>Map对象</h3><p>Map对象保存键值对。任何值都可以作为一个键或一个值。<br>
+        
+          <a class="article-more-a" href="/2019/10/09/aaa/#more">more >></a>
+        
       
 
       
@@ -222,7 +187,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/27/aaa/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/09/aaa/">展开全文 >></a>
         </p>
       
 
@@ -343,14 +308,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
