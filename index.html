@@ -152,6 +152,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaScript-BOM-元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/30/JavaScript-BOM-元素/">JavaScript BOM 详解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/30/JavaScript-BOM-元素/" class="archive-article-date">
+  	<time datetime="2019-12-30T02:32:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
+<p>趁着摸鱼写点东西吧，为什么要写这个呢？还不是因为本来对于dom和bom这一块的理解甚是着急，甚至可以说是了解都不是特别多，曾经也在犀牛书和JavaScript高级程序设计上看过这些，但那时的我技术贼菜对于bom这块完全不感冒觉得卵用没有。</p>
+<h2 id="1、Window对象"><a href="#1、Window对象" class="headerlink" title="1、Window对象"></a>1、Window对象</h2><p>所有浏览器都支持windows对象，它表示的是浏览器窗口，因此JavaScript全局对象、函数以及变量都自动成为windiw对象一员，window对象既是全局对象，也是全局对象。</p>
+<hr>
+<h3 id="1-1、Window尺寸"><a href="#1-1、Window尺寸" class="headerlink" title="1.1、Window尺寸"></a>1.1、Window尺寸</h3><p>对于IE、Chrome、Firefox、Opera以及safari</p>
+<ul>
+<li>window.innerHeight</li>
+<li>window.innerWidth</li>
+<li>window.outWidth 外部的宽度</li>
+<li>window.outHeight 外部的高度</li>
+</ul>
+<h4 id="1-1-2、对于IE8、7、6、5"><a href="#1-1-2、对于IE8、7、6、5" class="headerlink" title="1.1.2、对于IE8、7、6、5"></a>1.1.2、对于IE8、7、6、5</h4><ul>
+<li>document.documentclientWidth</li>
+<li>document.documnetclientHeight</li>
+<li>document.body.clientWidth</li>
+<li>document.body.clientHeigh</li>
+<li>document.body.clientTop</li>
+<li>document.body.clientleft</li>
+</ul>
+<h5 id="小结clientWidth和clientHeight"><a href="#小结clientWidth和clientHeight" class="headerlink" title="小结clientWidth和clientHeight"></a>小结clientWidth和clientHeight</h5><ol>
+<li>无padding无滚动： clientWidth = 盒子的width</li>
+<li>有padding无滚动：clientWidth=盒子的width+padding*2</li>
+<li>有padding有滚动：clientWidth=盒子的width+padding*2-滚动轴宽度</li>
+</ol>
+<p>clientTop和clientleft这两个是返回元素周围边框的厚度，如果不指定或不定位该元素它的值为0<br>clientTop=border-top<br>clientleft=border-left</p>
+<h3 id="1-1-3、window-screen"><a href="#1-1-3、window-screen" class="headerlink" title="1.1.3、window.screen"></a>1.1.3、window.screen</h3><ul>
+<li>window.screen.width</li>
+<li>window.screen.height</li>
+<li>window.screen.avaiHeight</li>
+<li>window.screen.avaiWidth</li>
+<li>window.screenTop</li>
+<li>window.screenleft</li>
+</ul>
+<h4 id="1-1-4、offset相关"><a href="#1-1-4、offset相关" class="headerlink" title="1.1.4、offset相关"></a>1.1.4、offset相关</h4><ul>
+<li>document.body.offsetWidth(元素的border+padding+content宽度)</li>
+<li>document.body.offsetHeight(元素的border+padding+content高度)</li>
+</ul>
+<p>该属性和其内部的内容是否超出元素大小无关，只和本来设定的border以及width和height有关</p>
+<ol>
+<li>无padding无滚动无border：offsetWidth=clientWidth=盒子的宽度</li>
+<li>有padding无滚动有border：盒子宽度+盒子padding<em>2+border</em>2=clientWidth+border*2</li>
+<li>有padding有滚动有border：盒子宽度+盒子padding<em>2+border</em>2+scroll=clientWidth+border*2+scroll</li>
+</ol>
+<hr>
+<h3 id="Window其他方法"><a href="#Window其他方法" class="headerlink" title="Window其他方法"></a>Window其他方法</h3><ul>
+<li>window.open()-打开新窗口</li>
+<li>window.ckose()-关闭当前窗口</li>
+<li>window.moveeTo()-移动当前窗口</li>
+<li>window.resizeTo()-调节当前窗口尺寸</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/30/JavaScript-BOM-元素/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScript原型链的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/25/JavaScript原型链的理解/">JavaScript原型链的理解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/25/JavaScript原型链的理解/" class="archive-article-date">
+  	<time datetime="2019-12-25T06:39:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="构造函数创建对象"><a href="#构造函数创建对象" class="headerlink" title="构造函数创建对象"></a>构造函数创建对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var person=new Person()</span><br><span class="line">person.name=&apos;Kevin&apos;</span><br><span class="line">console.log(person.name) //Kevin</span><br></pre></td></tr></table></figure>
+
+<p>上面的例子当中，person就是一个构造函数，使用new创建了一个实例</p>
+<h1 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h1><p>每个函数都有一个prototype属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name=&apos;Kevin&apos;</span><br><span class="line">var person1 =new Person()</span><br><span class="line">var person2 = new Person()</span><br><span class="line">console.log(person1.name)</span><br><span class="line">console.log(person2.name)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/25/JavaScript原型链的理解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-谈谈自己" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

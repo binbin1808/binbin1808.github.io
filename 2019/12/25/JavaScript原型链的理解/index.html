@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>谈谈自己的2019 | 蔡彬彬的博客</title>
+  <title>JavaScript原型链的理解 | 蔡彬彬的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一个不曾起舞的日子，都是对生命的辜负。一个人知道自己为什么而活，就可以忍受任何一种生活。其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。 ——尼采  上面是我高中时期看到的一个小说上的一句话，当时特别喜欢就拿他来作为这篇文章的开端吧。对于我个人来说我的目标还是做好一个前端至少在目前来说作为一个单身切没有什么压力的男生来说我只希望自己能够在养的活自己的同事找到一份自己喜欢的工">
+  <meta name="description" content="构造函数创建对象12345function Person()&amp;#123;&amp;#125;var person=new Person()person.name=&amp;apos;Kevin&amp;apos;console.log(person.name) //Kevin  上面的例子当中，person就是一个构造函数，使用new创建了一个实例 prototype每个函数都有一个prototype属性 1234567">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈自己的2019">
-<meta property="og:url" content="http://yoursite.com/2019/10/10/谈谈自己/index.html">
+<meta property="og:title" content="JavaScript原型链的理解">
+<meta property="og:url" content="http://yoursite.com/2019/12/25/JavaScript原型链的理解/index.html">
 <meta property="og:site_name" content="蔡彬彬的博客">
-<meta property="og:description" content="每一个不曾起舞的日子，都是对生命的辜负。一个人知道自己为什么而活，就可以忍受任何一种生活。其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。 ——尼采  上面是我高中时期看到的一个小说上的一句话，当时特别喜欢就拿他来作为这篇文章的开端吧。对于我个人来说我的目标还是做好一个前端至少在目前来说作为一个单身切没有什么压力的男生来说我只希望自己能够在养的活自己的同事找到一份自己喜欢的工">
+<meta property="og:description" content="构造函数创建对象12345function Person()&amp;#123;&amp;#125;var person=new Person()person.name=&amp;apos;Kevin&amp;apos;console.log(person.name) //Kevin  上面的例子当中，person就是一个构造函数，使用new创建了一个实例 prototype每个函数都有一个prototype属性 1234567">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-10-10T09:08:03.282Z">
+<meta property="og:updated_time" content="2019-12-25T07:44:20.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谈谈自己的2019">
-<meta name="twitter:description" content="每一个不曾起舞的日子，都是对生命的辜负。一个人知道自己为什么而活，就可以忍受任何一种生活。其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。 ——尼采  上面是我高中时期看到的一个小说上的一句话，当时特别喜欢就拿他来作为这篇文章的开端吧。对于我个人来说我的目标还是做好一个前端至少在目前来说作为一个单身切没有什么压力的男生来说我只希望自己能够在养的活自己的同事找到一份自己喜欢的工">
+<meta name="twitter:title" content="JavaScript原型链的理解">
+<meta name="twitter:description" content="构造函数创建对象12345function Person()&amp;#123;&amp;#125;var person=new Person()person.name=&amp;apos;Kevin&amp;apos;console.log(person.name) //Kevin  上面的例子当中，person就是一个构造函数，使用new创建了一个实例 prototype每个函数都有一个prototype属性 1234567">
   
     <link rel="alternative" href="/atom.xml" title="蔡彬彬的博客" type="application/atom+xml">
   
@@ -154,34 +154,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-谈谈自己" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript原型链的理解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      谈谈自己的2019
+      JavaScript原型链的理解
     </h1>
   
 
         
-        <a href="/2019/10/10/谈谈自己/" class="archive-article-date">
-  	<time datetime="2019-10-10T08:41:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
+        <a href="/2019/12/25/JavaScript原型链的理解/" class="archive-article-date">
+  	<time datetime="2019-12-25T06:39:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>每一个不曾起舞的日子，都是对生命的辜负。一个人知道自己为什么而活，就可以忍受任何一种生活。其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。 ——尼采</p>
-</blockquote>
-<p>上面是我高中时期看到的一个小说上的一句话，当时特别喜欢就拿他来作为这篇文章的开端吧。对于我个人来说我的目标还是做好一个前端至少在目前来说作为一个单身切没有什么压力的男生来说我只希望自己能够在养的活自己的同事找到一份自己喜欢的工作。关于前端我只能说我要走的路还特别长，我希望自己能够做一个好的前端。</p>
-<a id="more"></a>
+        <h1 id="构造函数创建对象"><a href="#构造函数创建对象" class="headerlink" title="构造函数创建对象"></a>构造函数创建对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;</span><br><span class="line">&#125;</span><br><span class="line">var person=new Person()</span><br><span class="line">person.name=&apos;Kevin&apos;</span><br><span class="line">console.log(person.name) //Kevin</span><br></pre></td></tr></table></figure>
 
-<p>2019年</p>
-
+<p>上面的例子当中，person就是一个构造函数，使用new创建了一个实例</p>
+<h1 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h1><p>每个函数都有一个prototype属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name=&apos;Kevin&apos;</span><br><span class="line">var person1 =new Person()</span><br><span class="line">var person2 = new Person()</span><br><span class="line">console.log(person1.name)</span><br><span class="line">console.log(person2.name)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -239,7 +236,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/10/谈谈自己/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/25/JavaScript原型链的理解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -253,18 +250,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/25/JavaScript原型链的理解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/30/JavaScript-BOM-元素/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScript原型链的理解
+          JavaScript BOM 详解
         
       </div>
     </a>
   
   
-    <a href="/2019/10/09/初探webpack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初探webpack</div>
+    <a href="/2019/10/10/谈谈自己/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈自己的2019</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -291,7 +288,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#构造函数创建对象"><span class="toc-number">1.</span> <span class="toc-text">构造函数创建对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#prototype"><span class="toc-number">2.</span> <span class="toc-text">prototype</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -305,7 +302,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="谈谈自己" data-title="谈谈自己的2019" data-url="http://yoursite.com/2019/10/10/谈谈自己/"></div>
+	<div class="ds-thread" data-thread-key="JavaScript原型链的理解" data-title="JavaScript原型链的理解" data-url="http://yoursite.com/2019/12/25/JavaScript原型链的理解/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
