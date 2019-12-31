@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="蔡彬彬的博客">
 <meta property="og:description" content="前言 趁着摸鱼写点东西吧，为什么要写这个呢？还不是因为本来对于dom和bom这一块的理解甚是着急，甚至可以说是了解都不是特别多，曾经也在犀牛书和JavaScript高级程序设计上看过这些，但那时的我技术贼菜对于bom这块完全不感冒觉得卵用没有。 1、Window对象所有浏览器都支持windows对象，它表示的是浏览器窗口，因此JavaScript全局对象、函数以及变量都自动成为windiw对象一员">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-12-30T09:41:28.974Z">
+<meta property="og:updated_time" content="2019-12-30T09:51:06.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript BOM 详解">
 <meta name="twitter:description" content="前言 趁着摸鱼写点东西吧，为什么要写这个呢？还不是因为本来对于dom和bom这一块的理解甚是着急，甚至可以说是了解都不是特别多，曾经也在犀牛书和JavaScript高级程序设计上看过这些，但那时的我技术贼菜对于bom这块完全不感冒觉得卵用没有。 1、Window对象所有浏览器都支持windows对象，它表示的是浏览器窗口，因此JavaScript全局对象、函数以及变量都自动成为windiw对象一员">
@@ -210,8 +210,8 @@
 <h4 id="1-1-4、offset相关"><a href="#1-1-4、offset相关" class="headerlink" title="1.1.4、offset相关"></a>1.1.4、offset相关</h4><ul>
 <li>document.body.offsetWidth(元素的border+padding+content宽度)</li>
 <li>document.body.offsetHeight(元素的border+padding+content高度)</li>
+<li>document.offsetleft<br>该属性和其内部的内容是否超出元素大小无关，只和本来设定的border以及width和height有关</li>
 </ul>
-<p>该属性和其内部的内容是否超出元素大小无关，只和本来设定的border以及width和height有关</p>
 <ol>
 <li>无padding无滚动无border：offsetWidth=clientWidth=盒子的宽度</li>
 <li>有padding无滚动有border：盒子宽度+盒子padding<em>2+border</em>2=clientWidth+border*2</li>
@@ -295,6 +295,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/12/31/js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript笔记|基本概念
+        
+      </div>
+    </a>
   
   
     <a href="/2019/12/25/JavaScript原型链的理解/" id="article-nav-older" class="article-nav-link-wrap">
