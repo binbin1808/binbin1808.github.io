@@ -152,6 +152,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-每日一算法-LeetCode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/02/每日一算法-LeetCode/">每日一算法|LeetCode</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/02/每日一算法-LeetCode/" class="archive-article-date">
+  	<time datetime="2020-01-02T07:43:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="今日起每日一算法题目"><a href="#今日起每日一算法题目" class="headerlink" title="今日起每日一算法题目"></a>今日起每日一算法题目</h1><hr>
+<p>摸鱼一时爽一直摸鱼一直爽今天就来安利一道较为简单的算法题目（算法题目源自于LeetCode）</p>
+<p>两数之和:<br>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+<p>实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/two-sum</span><br></pre></td></tr></table></figure>
+
+<p>下面我们来说说解题思路吧<br>对于这样的问题有两种方法</p>
+<h4 id="一、暴力法"><a href="#一、暴力法" class="headerlink" title="一、暴力法"></a>一、暴力法</h4><p>所谓的暴力法就是用两层循环嵌去遍历做对比，这里其实也可以优化一点先看看我的代码吧，这是一个考虑不周全的解法，这里进行了两次循环通过两数之和与target作比较找出合适的解，每次循环之中都会有重复的加法，由于进行了两次循环所以他的时间复杂度为O(n²)，空间复杂度为O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = function(nums, target) &#123;</span><br><span class="line">    for(var i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">        for(var j=0;j&lt;nums.length;j++)&#123;</span><br><span class="line">            if(i!==j&amp;&amp;nums[i]+nums[j]===target)&#123;</span><br><span class="line">                return [i,j]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>社区给出的暴力解法，剔除了每次循环重复的加法，因此用时优于我的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = function(nums, target) &#123;</span><br><span class="line">    for (var i = 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">        var dif = target - nums[i];</span><br><span class="line">        // j = i + 1 的目的是减少重复计算和避免两个元素下标相同</span><br><span class="line">        for (var j = i + 1; j &lt; nums.length; j++) &#123;</span><br><span class="line">            if(nums[j] == dif)</span><br><span class="line">                return [i,j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、使用map"><a href="#二、使用map" class="headerlink" title="二、使用map"></a>二、使用map</h4><p>运用js的map此时只经历了一层循环因此时间复杂度为O(n)，空间复杂度也为O(n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = function(nums, target) &#123;</span><br><span class="line"> let arrs =new Map()</span><br><span class="line">    for(let i=0;i&lt;nums.length;i++)&#123;</span><br><span class="line">       if(arrs.has(target-nums[i]))&#123;</span><br><span class="line">          return[arrs.get(target-nums[i]),i] </span><br><span class="line">       &#125;</span><br><span class="line">        arrs.set(nums[i],i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/02/每日一算法-LeetCode/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -503,7 +582,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 binbin1808
+    		&copy; 2020 binbin1808
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
